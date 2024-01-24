@@ -1,0 +1,14 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+node_modules
+*.log
+.DS_Store
+/wp-admin
+/wp-includes
+/apps
+/cgi-bin
+/client_ftp
+/wp-content/uploads
+/wp-content/upgrade
+/wp-content/plugins
+/*.php

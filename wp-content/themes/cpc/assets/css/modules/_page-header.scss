@@ -1,0 +1,204 @@
+.page-header {
+  overflow:hidden;
+  background:url(../images/duotone.jpg) center center / cover no-repeat transparent;
+  height:320px;
+}
+
+.page-header > div,
+.page-header > div > div, 
+.page-header > div > div > div {
+  height:100%;
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.page-header-content {
+
+  height:600px;
+  position:relative;
+
+  .page-header-content-inner {
+    width:100%;
+    z-index    : 2;
+    position   : absolute;
+    width      : 100%;
+    top        : 50%;
+    left       : 0;
+    height     : 100%;
+    box-sizing : border-box;
+    padding    : 0;
+    width      : 100%;
+    transform  : translateY(-50%);
+    height     : auto;
+    text-align:center;
+  }
+
+  h1 {
+    color:$cpc;
+    font-weight:900;
+    font-size:8em;
+    margin:0;
+    padding:0;
+    text-align:center;
+    text-transform:uppercase;
+    line-height: 1;
+  }
+
+  h2 {
+    margin         : 0 auto;
+    color          : $cpc;
+    font-weight    : 900;
+    text-align     : center;
+    text-transform : uppercase;
+    font-size      : 1.2em;
+    display        : inline-block;
+    padding        : 0.5em 1em;
+    line-height    : 1;
+  }
+
+}
+
+.page-header-content-link {
+
+  position : absolute;
+  bottom   : 1.6em;
+  height   : auto;
+  width    : 100%;
+  z-index  : 2;
+  width    : ( 6 / 16 ) * 100%;
+  left     : 0;
+
+  .page-header-content-alignment-right + & {
+    right : 0;
+    left  : auto;
+  }
+
+  p {
+
+    color:$white;
+    font-size:0.9em;
+    text-align:center;
+    transition : all 0.4s ease-out;
+    padding:0;
+    margin:0;
+
+    a {
+
+      text-transform:uppercase;
+      font-weight:700;
+      position:relative;
+      padding:0;
+      text-decoration:none;
+      color:$white;
+      letter-spacing:1px;
+      margin:0 0 0 0.3em;
+      font-size:0.9em;
+      box-shadow:0 2px 0 $shakespeare;
+      transition : all 0.4s ease-out;
+
+      &:after {
+        content:'';
+        background:url(../../images/caret-right-white.svg) right center no-repeat transparent;
+        position:absolute;
+        width:4px;
+        height:100%;
+        right:-0.7em;
+        top:0px;
+        opacity:1;
+        transition : all 0.4s ease-out;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        
+        text-decoration:none;
+
+      }
+
+    }
+
+  }
+
+}
+
+.page-header .page-header-content-controls {
+  height:auto;
+  display:none;
+  @include group;
+
+  span {
+    transition : all 0.4s ease-out;
+  }
+
+  label {
+    color:$white;
+    padding:1em 0;
+  }
+
+  .page-header-content-controls-text-input {
+    box-shadow:0 0 0 2px $white, 0 0 0 3px $silver, inset 0 0 10px 0 $silver;
+    display:inline-block;
+    width:60%;
+    padding:0 0 0 2.5em;
+    background:url(../../images/icon-camera-black.svg) 0.5em center / auto 50% no-repeat $white;
+  }
+
+  .page-header-content-controls-submit-input {
+    display:inline-block;
+    padding:1.2em 0;
+    width:30%;
+    margin:0 0 0 5%;
+    position:relative;
+    top:-4px;
+  }
+
+}
+
+.page-header-image {
+  position            : absolute;
+  width               : 100%;
+  top                 : 0;
+  bottom              : 0;
+  height              : 100%;
+  left                : 0;
+  right               : 0;
+  z-index             : 0;
+  background-color    : $black;
+  background-position : center center;
+  background-repeat   : no-repeat;
+  background-size     : cover;
+  transition          : all 0.4s ease-out;
+  z-index             : 1;
+}
+
+@media ( min-width: $grid-small-breakpoint ) {
+
+  .page-header {
+    height:600px;
+  }
+
+  .page-header-content h2 {
+    background: url(../images/cpc-icon-orange.svg) right 15px/4% auto no-repeat;
+    font-size: 1.5em;
+    padding: .5em 1.5em .5em 0;
+    line-height: 1;
+  }
+  
+}
+
+@media ( min-width: $grid-medium-breakpoint ) {
+
+  .page-header-content h2 {
+    font-size: 2em;
+  }
+  
+}
+
+@media ( min-width: $grid-large-breakpoint ) {
+
+  .page-header-content h2 {
+    font-size: 2.5em;
+  }
+  
+}

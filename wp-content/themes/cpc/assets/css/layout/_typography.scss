@@ -1,0 +1,139 @@
+a {
+  color: $juniper;
+  &:focus,
+  &:hover,
+  &:active {
+    color: darken($juniper, 20%);
+  }
+}
+
+html {
+  color                  : $tuna;
+  font-family            : $font-family;
+  font-size              : 62.5%;
+  -webkit-font-smoothing : antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family : $font-family;
+  color       : $mine-shaft;
+}
+
+h1 {
+  font-size: 1.75em;
+}
+
+h1, h2, h3 {
+  padding:0 0 em(10px);
+}
+
+h2 {
+  font-size: em(30px);
+}
+
+h3 {
+  font-size: em(26px);
+}
+
+h4 {
+  font-size: em(22px);
+}
+
+h5 {
+  font-size: em(20px);
+}
+
+h6 {
+  font-size: em(18px);
+}
+
+p {
+  line-height: 1.75;
+  padding:0 0 1em;
+  margin:0;
+
+  &.footnote {
+    font-size: em(12px);
+  }
+
+}
+
+p, ul, ol, h1, h2, h3 {
+
+}
+
+ul, ol {
+
+}
+
+sup {
+  vertical-align : super;
+  font-size      : 0.6em;
+  line-height    : 0;
+}
+
+.centered {
+  text-align:center;
+}
+
+h1, h2, h3, h4, h5, h6 {  
+
+  em {
+    font-size      : 0.5em;
+    display        : block;
+    margin         : 5px 0 0;
+    color          : $flamingo;
+    font-family    : $font-family;
+    font-weight    : 100;
+    letter-spacing : 1px;
+  }
+
+}
+
+h1 em {
+  font-size: 0.3em;
+}
+
+h2 em {
+  font-size: 0.4em;
+}
+
+h3 em {
+  font-size: 0.45em;
+}
+
+@media ( min-width: $grid-small-breakpoint ) {
+
+  h1 {
+    font-size: 2em;
+  }
+
+}
+
+@media ( min-width: $grid-medium-breakpoint ) {
+
+  h1 {
+    font-size: em(64px);
+  }
+
+  h2 {
+    font-size: em(48px);
+  }
+
+  h3 {
+    font-size: em(36px);
+  }
+
+  h4 {
+    font-size: em(30px);
+  }
+
+  h5 {
+    font-size: em(26px);
+  }
+
+  h6 {
+    font-size: em(20px);
+  }
+
+}

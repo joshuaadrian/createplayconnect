@@ -1,0 +1,94 @@
+$base-font-size: 18px;
+
+// Colors
+
+// Greys
+$cod-gray   : #2a2b30;
+$juniper    : #798C8F;
+$tuna       : #3d3f47;
+$shark      : #303238;
+$bombay     : #B0B0B3;
+$iron       : #dcdfe3;
+$cloudy     : #aaa8a6;
+$mercury    : #e7e6e6;
+$mid-gray   : #5F6067;
+$gray       : #888888;
+$edward     : #b1b3b2;
+$silver     : #cdcccc;
+$gray-nurse : #e9ebe6;
+$dusty-gray : #999999;
+$smoke      : #f5f5f5;
+$black      : #111111;
+$pale-sky   : #697785;
+$mine-shaft : #333333;
+
+// Blues
+$pelorous         : #3ea8bf;
+$shakespeare      : #3d96d0;
+$pickled-bluewood : #2a3d52;
+$astral           : #327db1;
+$boston-blue      : #3483ba;
+$regent-st-blue   : #a6c9e1;
+$mirage           : #16222F;
+
+// Oranges
+$flamingo   : #f2622b;
+$piper      : #cf5425;
+$tia-maria  : #DA460E;
+$rock-spray : #ba3c0c;
+$cpc        : #f68e1e;
+$cpc-blue   : #29abe2;
+$cpc-blue2  : #009add;
+$cpc-red    : #c1272d;
+
+// Greens
+$keppel      : #42b49e;
+$ocean-green : #399986;
+$elm         : #198d77;
+$genoa       : #167865;
+$fruit-salad : #49a35e;
+
+// Whites
+$white : #ffffff;
+
+// Social
+$facebook  : #3f66a7;
+$twitter   : #3eb7d5;
+$pinterest : #d54d4d;
+
+// Palette
+$school        : #5c9f59;
+$school-alt    : #538f50;
+$business      : #333333;
+$business-alt  : #292929;
+$sports        : #ca3f40;
+$sports-alt    : #b53939;
+$faith         : #745a8e;
+$faith-alt     : #664f7d;
+$preschool     : #42af9c;
+$preschool-alt : #3da190;
+$senior        : #3b5978;
+$senior-alt    : #344e69;
+$yearbooks     : #ffbe41;
+$yearbooks-alt : #f0b33d;
+$groups        : #e67a2d;
+$groups-alt    : #d47029;
+
+// Font Families
+$helvetica   : monospace,"Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family : "proxima-nova", $helvetica;
+
+// GRID VARIABLES
+$grid-gutter-width        : 15px;
+$grid-large-gutter-width  : 20px;
+$grid-medium-gutter-width : 15px;
+$grid-small-gutter-width  : 10px;
+$grid-column-amount       : 16;
+$grid-large-breakpoint    : 1380px;
+$grid-medium-breakpoint   : 1170px;
+$grid-small-breakpoint    : 940px;
+$grid-xsmall-breakpoint   : 768px;
+
+@media ( min-width: $grid-small-breakpoint ) {
+	$base-font-size: 16px;
+}

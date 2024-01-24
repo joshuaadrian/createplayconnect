@@ -1,0 +1,26 @@
+@import "library/variables";
+
+@import "library/mixins";
+
+body#tinymce.wp-editor {
+
+	font-family : $font-family;
+
+	@import "layout/typography";
+
+	@import "layout/layout";
+
+	h1, h2, h3, h4, h5, h6 {
+		margin:0;
+		padding:0 0 0.625em;
+	}
+
+	hr {
+        clear: both;
+        background: $iron;
+        border: 0px solid transparent;
+        height: 1px;
+        margin: 2.75em 0 3em;
+    }
+
+}

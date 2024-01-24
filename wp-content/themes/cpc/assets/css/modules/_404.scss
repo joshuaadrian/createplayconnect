@@ -1,0 +1,48 @@
+.content-404 {
+
+	background:$white;
+	
+	.content-404-image {
+
+		background:url(../../images/404.jpg) center center;
+		background-size:cover;
+		width:100%;
+		height:30em;
+		margin:10em 0 4em;
+		transition : all 0.5s ease;
+
+		&:hover {
+			filter: unquote("invert(100%)");
+		}
+
+		h1 {
+			
+			color:rgba(0,255,255,0.6);
+			font-size:45em;
+			letter-spacing: 2px;
+			text-align:center;
+			font-weight:900;
+			line-height:1;
+			text-shadow:20px 20px 0 rgba(255,0,255,0.6), 20px -20px 0 rgba(255,255,0,0.6);
+			margin:0;
+			padding:0;
+			top:-0.2em;
+			position:relative;
+
+		}
+
+	}
+
+	h2 {
+		margin-top:2em;
+		text-align:center;
+		text-transform:uppercase;
+	}
+
+	h3 {
+		text-align:center;
+		text-transform:uppercase;
+		margin-bottom:3em;
+	}
+
+}

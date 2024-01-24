@@ -1,0 +1,798 @@
+#header {
+	width      : 100%;
+	height     : 400px;
+	position   : relative;
+	display    : block;
+	background : $mid-gray;
+
+	.single &,
+	.page-no-featured-image & {
+		height:auto;
+	}
+
+}
+
+.navbar {
+
+	position   : absolute;
+	z-index    : 3;
+	width      : 100%;
+	background : $mirage;
+	min-height : 80px;
+	color      : $white;
+
+	div {
+		height        : 100%;
+		margin-top    : 0;
+		margin-bottom : 0;
+	}
+
+}
+
+.branding {
+
+	@include group;
+
+	.logo {
+
+		float:left;
+		padding:0;
+		margin:15px 0 0 0;
+		font-size:1em;
+		height:60px;
+		width:100px;
+
+		a {
+
+			display:block;
+			line-height:50px;
+			text-decoration:none;
+			color:$white;
+			text-align:center;
+			padding:0;
+			font-size:1.4em;
+			letter-spacing:2px;
+			font-weight:600;
+			text-transform:uppercase;
+			background-image:url(../../images/cpc-logo.svg);
+			background-position:left center;
+			background-repeat:no-repeat;
+			background-color:transparent;
+			text-indent: -9999px;
+			height:50px;
+
+			&:hover,
+			&:focus,
+			&:active {
+				text-decoration:none;
+				color:$white;
+			}
+
+		} 
+
+    }
+
+    h2 {
+
+    	display:none;
+    	
+    }
+
+}
+
+.branding-links {
+
+	display:none;
+
+}
+
+.branding-touch {
+
+	display:block;
+	float:right;
+	position:relative;
+	width:auto;
+	height:100%;
+
+	a {
+
+		display:block;
+		height:100%;
+		line-height:80px;
+		color:$white;
+		position: relative;
+		text-decoration:none;
+		padding:0 30px 0 0;
+		text-transform:uppercase;
+		font-weight: 700;
+		font-size: 0.8em;
+
+		.bars {
+
+			position: absolute;
+			right: 0;
+			display: block;
+			top: 50%;
+			height: 30px;
+			width: 20px;
+			margin-top: -15px;
+
+			span {
+				background:$white;
+				top:0;
+				width:100%;
+				height:3px;
+				border-radius:1px;
+				margin-top:5px;
+				position:relative;
+				display:block;
+				opacity:1;
+				transition : all 0.3s ease;
+			}
+
+		}
+
+	}
+
+}
+
+.navbar.is-open .branding-touch {
+
+	.bars {
+
+		.bar-one {
+			transform: rotate(45deg);
+			top:8px;
+		}
+
+		.bar-two {
+			transform: rotate(-45deg);
+		}
+
+		.bar-three {
+			opacity:0;
+		}
+
+	}
+
+}
+
+.navbar-links {
+
+	clear      : both;
+	width      : 100%;
+	padding    : 0;
+	overflow   : hidden;
+	display    : none;
+
+	.navbar.is-open & {
+		display:block;
+	}
+
+	nav {
+
+		@include group;
+
+		ul {
+			list-style-type : none;
+			padding         : 1em 2em 2em 0;
+			margin          : 0;
+			float           : left;
+			width           : 50%;
+
+			&.nav-community {
+				text-transform:none;
+			}
+
+			&.nav-other-sites {
+
+				a {
+					text-transform:none;
+				}
+				
+			}
+
+			&.nav-touch {
+				text-align:right;
+				width:100%;
+
+				a {
+					
+					font-size: 1em;
+					position:relative;
+					display:inline-block;
+
+					&.navbar-links-contact {
+
+						&:after {
+							content:'';
+				    		background:url(../../images/icon-chat-white.svg) right center no-repeat transparent;
+				    		position:absolute;
+				    		width: 22px;
+							height: 100%;
+							left: -2.4em;
+							top:0px;
+				        }
+
+					}
+
+					&.navbar-links-about {
+
+						&:after {
+							content: '\00ae';
+							position: absolute;
+							width: auto;
+							height: 100%;
+							right: -1em;
+							top: 0.75em;
+							color: #fff;
+							font-size: 0.7em;
+				        }
+
+					}
+
+				}
+
+			}
+
+		}
+
+		li {
+			padding:0;
+			margin:0;
+
+			> span {
+
+				padding   : 0 0 0.6em 0;
+				color     : $smoke;
+				font-size : 0.8em;
+				display:block;
+				line-height:1;
+
+			}
+
+		}
+
+		a {
+
+			color:$white;
+			font-weight:700;
+			text-decoration:none;
+			text-transform:uppercase;
+			font-size:0.8em;
+			padding:0.5em 0;
+			display:block;
+			position:relative;
+
+			&:hover,
+	        &:focus,
+	        &:active {
+	          text-decoration:underline;
+	        }
+
+			span {
+				text-transform:none;
+			}
+
+		}
+
+	}
+
+}
+
+.touch {
+
+	.navbar:hover .navbar-links {
+		height:auto;
+		max-height:inherit;
+		display:none;
+	}
+
+	.navbar:hover + .page-header > .page-header-image {
+		filter: blur(0px) unquote("grayscale(0)");
+	}
+
+	.navbar:hover + .page-header .page-header-content h3,
+	.navbar:hover + .page-header .page-header-content h5,
+	.navbar:hover + .page-header .page-header-content p,
+	.navbar:hover + .page-header .page-header-content p a {
+		color: $white;
+		text-shadow: 0 0 0 rgba(255,255,255,0);
+	}
+
+	.navbar.is-open .navbar-links {
+		display:block;
+	}
+
+	.navbar-links {
+		display:none;
+		visibility:visible;
+		height:auto;
+		max-height:inherit;
+		padding:0;
+
+		nav ul {
+
+			padding-right:4em;
+			padding-bottom:2em;
+			padding-top:1em;
+			width:50%;
+
+			&.nav-touch {
+				display:block;
+				width:100%;
+				padding-top:0;
+				padding-right:0;
+
+				a {
+					font-size:0.8em;
+				}
+			}
+
+		}
+
+	}
+
+	.branding {
+
+		.logo {
+			width:100px;
+			margin-right:0;
+		}
+
+		h2 {
+			display:none;
+		}
+
+	}
+
+	.branding-links {
+		display:none;
+	}
+
+	.branding-touch {
+
+		display:block;
+		float:right;
+		position:relative;
+		width:auto;
+		height:100%;
+
+		a {
+
+			display:block;
+			height:100%;
+			line-height:80px;
+			color:$white;
+			position: relative;
+			text-decoration:none;
+			padding:0 40px 0 0;
+			text-transform:uppercase;
+			font-weight: 700;
+			font-size: 0.8em;
+
+			.bars {
+
+				position: absolute;
+				right: 0;
+				display: block;
+				top: 50%;
+				height: 30px;
+				width: 30px;
+				margin-top: -15px;
+
+				span {
+					background:$white;
+					width:100%;
+					height:3px;
+					border-radius:1px;
+					margin-top:5px;
+					position:relative;
+					display:block;
+				}
+
+			}
+
+		}
+
+	}
+
+	.is-open .branding-touch {
+
+	}
+
+}
+
+@media ( min-width: $grid-small-breakpoint ) {
+
+	.navbar {
+		background : #000;
+		background : rgba(0,0,0,0.6);
+	}
+  
+	.navbar-links nav ul {
+		width:25%;
+
+		a {
+			font-size:0.8em;
+		}
+
+	}
+
+	.navbar-links nav ul.nav-touch {
+		width:25%;
+		padding-top:0;
+		padding-right:0;
+
+		a {
+			font-size:0.8em;
+		}
+	}
+
+}
+
+@media ( min-width: $grid-medium-breakpoint ) {
+
+	.touch .navbar-links nav ul {
+
+		width:25%;
+
+		&.nav-touch {
+			width:25%;
+		}
+
+	}
+
+	.touch .branding-touch a {
+		line-height:100px;
+	}
+
+	#header {
+		width      : 100%;
+		height     : 400px;
+		position   : relative;
+		display    : block;
+		background : $mid-gray;
+
+		.single &,
+		.page-no-featured-image {
+			height:auto;
+		}
+
+	}
+
+	.navbar {
+
+		position   : absolute;
+		z-index    : 3;
+		width      : 100%;
+		background : #000;
+		background : rgba(0,0,0,0.5);
+		min-height : 100px;
+		color      : $white;
+		transition : all 0.3s ease;
+		border-top:0 solid transparent;
+
+		div {
+			height        : 100%;
+			margin-top    : 0;
+			margin-bottom : 0;
+		}
+
+	}
+
+	.navbar:hover {
+	  background:rgba(0,0,0,0.7);
+	}
+
+	.navbar:hover .navbar-links {
+		display    : block;
+		visibility : visible;
+		max-height : 400px;
+	}
+
+	.navbar:hover + .page-header > .page-header-image {
+	  filter: blur(10px) unquote("grayscale(.5)");
+	}
+
+	.page-header .page-header-content h3,
+	.page-header .page-header-content h5,
+	.page-header .page-header-content p,
+	.page-header .page-header-content p a {
+		transition : all 0.3s ease;
+	}
+
+	.navbar:hover + .page-header .page-header-content h3,
+	.navbar:hover + .page-header .page-header-content h5,
+	.navbar:hover + .page-header .page-header-content p,
+	.navbar:hover + .page-header .page-header-content p a {
+		color: transparent;
+		text-shadow: 0 0 10px rgba(255,255,255,0.3);
+	}
+
+	.navbar:hover + .page-header .page-header-content p a {
+
+		box-shadow:0 2px 0 transparent;
+
+		&:after {
+			opacity: 0;
+		}
+
+	}
+
+	.navbar:hover + .page-header .page-header-content .page-header-content-controls span {
+		filter: blur(10px) unquote("grayscale(.5)");
+	}
+
+	.branding {
+
+		@include group;
+
+		.logo {
+
+			float:left;
+			padding:0;
+			margin:1.3em 2.2em 0 0;
+			font-size:1em;
+			height:80px;
+			width:270px;
+
+			a {
+
+				display:block;
+				line-height:60px;
+				text-decoration:none;
+				color:$white;
+				text-align:center;
+				padding:0;
+				font-size:1.4em;
+				letter-spacing:2px;
+				font-weight:600;
+				text-transform:uppercase;
+				background:url(../../images/cpc-logo.svg) left center no-repeat transparent;
+				text-indent: -9999px;
+				height:60px;
+
+				&:hover,
+				&:focus,
+				&:active {
+					text-decoration:none;
+					color:$white;
+				}
+
+			} 
+
+	    }
+
+	    h2 {
+
+	    	float:left;
+			padding:0 0 0.2em;
+			margin:3em 0 0;
+			line-height:1;
+			font-size:0.9em;
+			color:$white;
+			font-weight:700;
+			letter-spacing: 2px;
+			text-transform:uppercase;
+			border-bottom:1px solid $white;
+			position:relative;
+			cursor:pointer;
+			display:block;
+
+			&:after {
+	    		content:'';
+	    		background:url(../../images/caret-down-white.svg) right center no-repeat transparent;
+	    		position:absolute;
+	    		width:6px;
+	    		height:100%;
+	    		right:-1.5em;
+	    		top:-1px;
+	    	}
+	    	
+	    }
+
+	}
+
+	.branding-links {
+
+		float:right;
+		display:block;
+
+		ul {
+
+			list-style-type:none;
+			margin:0;
+			padding:0;
+
+			li {
+
+				display:inline-block;
+
+				a {
+
+					font-size:0.8em;
+					line-height:100px;
+					margin:0 0 0 5em;
+					color:$white;
+					font-weight:700;
+					text-transform:uppercase;
+					text-decoration:none;
+					letter-spacing:2px;
+					display:block;
+					position:relative;
+
+					&:hover,
+			        &:focus,
+			        &:active {
+			          text-decoration:underline;
+			        }
+
+			    }
+
+		        &.branding-links-home a {
+					margin:0;
+		        }
+
+		        &.branding-links-about a {
+
+		        	margin:0 0 0 4em;
+
+		        	&:after {
+						content: '\00ae';
+						position: absolute;
+						width: auto;
+						height: 100%;
+						right: -1em;
+						top: -.05em;
+						color: #fff;
+						font-size: 0.7em;
+			        }
+
+			    }
+
+		        &.branding-links-contact a {
+
+		        	margin:0 0 0 6.5em;
+
+		        	&:after {
+						content:'';
+			    		background:url(../../images/icon-chat-white.svg) right center no-repeat transparent;
+			    		position:absolute;
+			    		width: 22px;
+						height: 100%;
+						left: -2.4em;
+						top:0px;
+			        }
+
+				}
+
+			}
+
+		}
+
+	}
+
+	.branding-touch {
+		display:none;
+	}
+
+	.navbar-links {
+
+		visibility : hidden;
+		clear      : both;
+		width      : 100%;
+		padding    : 0 0 0 19.2em;
+		max-height : 0;
+		overflow   : hidden;
+		transition : all 0.6s ease;
+		display    : block;
+
+		nav {
+
+			ul {
+				list-style-type : none;
+				padding         : 0 8.2em 4.7em 0;
+				margin          : 0;
+				float           : left;
+							width:auto;
+
+				&.nav-community {
+					text-transform:none;
+					padding         : 0 6em 0 0;
+				}
+
+				&.nav-other-sites {
+
+					padding:0;
+
+					a {
+						text-transform:none;
+						font-size:0.9em;
+						padding:0.5em 0;
+					}
+					
+				}
+
+				&.nav-touch {
+					display:none;
+				}
+
+			}
+
+			li {
+				padding:0;
+				margin:0;
+
+				> span {
+
+					padding   : 0 0 0.6em 0;
+					color     : $smoke;
+					font-size : 0.8em;
+					display:block;
+					line-height:1;
+
+				}
+
+			}
+
+			a {
+
+				color:$white;
+				font-weight:700;
+				text-decoration:none;
+				text-transform:uppercase;
+				font-size:1em;
+				padding:0.6em 0;
+				display:block;
+				position:relative;
+
+				&:hover,
+		        &:focus,
+		        &:active {
+		          text-decoration:underline;
+		        }
+
+				span {
+					text-transform:none;
+				}
+
+			}
+
+		}
+
+	}
+  
+	#header {
+		height:520px;
+
+		.single &,
+		.page-no-featured-image & {
+			height:auto;
+		}
+
+	}
+
+
+
+}
+
+@media ( min-width: $grid-large-breakpoint ) {
+
+	#header {
+		height:570px;
+
+		.single &,
+		.page-no-featured-image & {
+			height:270px;
+		}
+
+		.page-template-page-content-one & {
+
+			height:460px;
+
+		}
+
+	}
+  
+}

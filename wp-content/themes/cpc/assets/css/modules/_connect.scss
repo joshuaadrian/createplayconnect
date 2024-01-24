@@ -1,0 +1,78 @@
+#connect {
+
+  .connect-copy {
+
+    padding:0.65em 0;
+    text-align: center;
+
+  }
+
+  p {
+
+    font-size:1.25em;
+
+    strong {
+      color:$cpc;
+      font-weight:bold;
+      font-size:1.1em;
+      text-transform:uppercase;
+    }
+
+    a {
+
+      text-decoration:none;
+      color:$tuna;
+
+    }
+
+  }
+
+  p + p {
+  
+    margin-top:-1.5em;
+
+  }
+
+}
+
+.connect-map {
+
+  width:100%;
+  height:auto;
+  
+  img {
+
+    width:100%;
+    height:auto;
+
+  }
+
+}
+
+@media ( min-width: $grid-small-breakpoint ) {
+
+  #connect {
+
+    .connect-copy {
+
+      padding:1.25em 0;
+      text-align: left;
+
+    }
+
+  }
+
+  .connect-map {
+    padding:0 5em 0 0;
+    border-right:1px solid $iron;
+  }
+  
+}
+
+@media ( min-width: $grid-medium-breakpoint ) {
+  
+}
+
+@media ( min-width: $grid-large-breakpoint ) {
+  
+}

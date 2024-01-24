@@ -1,0 +1,63 @@
+.link {
+
+	display:inline-block;
+	color:$shakespeare;
+	position:relative;
+	text-decoration:none;
+
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration:underline;
+	}
+
+	&.link-primary {
+		font-size:0.8em;
+		text-transform:uppercase;
+		font-weight:700;
+	}
+
+	&.link-black {
+
+		color:$mine-shaft;
+
+		&.link-arrow:after,
+		&.link-arrow:hover:after,
+		&.link-arrow:active:after,
+		&.link-arrow:focus:after {
+
+			background:url(../../images/caret-right-black.svg) right center no-repeat transparent;
+
+		}
+
+	}
+
+	&.link-arrow {
+
+		&:after {
+
+			content    : '';
+			background : url(../../images/caret-right-light-blue.svg) right center no-repeat transparent;
+			position   : absolute;
+			width      : 5px;
+			height     : 100%;
+			right      : -0.75em;
+			top        : 0;
+
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+
+			&:after {
+
+				background-image:url(../../images/caret-right-blue.svg);
+
+			}
+
+		}
+
+	}
+
+}

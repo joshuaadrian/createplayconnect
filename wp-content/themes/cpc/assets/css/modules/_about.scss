@@ -1,0 +1,417 @@
+#about {
+  position:relative;
+  @include group;
+  width:100%;
+  height:auto;
+}
+
+.about-bg-image {
+  display:block;
+  width:100%;
+}
+
+.about-image {
+
+  float:left;
+  width:20%;
+  height:70px;
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-color:$cpc;
+  transform: rotateX(90deg);
+  transition:all 1s ease;
+
+  &.in {
+    transform: rotateX(0deg);
+  }
+
+}
+
+.about-image-1 {
+  background-image:url(../images/about-image-1.jpg) ;
+}
+
+.about-image-2 {
+  background-image:url(../images/about-image-2.jpg) ;
+}
+
+.about-image-3 {
+  background-image:url(../images/about-image-3.jpg) ;
+}
+
+.about-image-4 {
+  background-image:url(../images/about-image-4.jpg) ;
+}
+
+.about-image-5 {
+  background-image:url(../images/about-image-5.jpg) ;
+}
+
+.about-image-6 {
+  display:none;
+  background-image:url(../images/about-image-6.jpg) ;
+}
+
+.about-image-7 {
+  display:none;
+  background-image:url(../images/about-image-7.jpg) ;
+}
+
+.about-image-8 {
+  display:none;
+  background-image:url(../images/about-image-8.jpg) ;
+}
+
+.about-image-9 {
+  display:none;
+  background-image:url(../images/about-image-9.jpg) ;
+}
+
+.about-image-10 {
+  display:none;
+  background-image:url(../images/about-image-10.jpg) ;
+}
+
+.about-image-15 {
+  background-image:url(../images/about-image-11.jpg) ;
+}
+
+.about-image-16 {
+  background-image:url(../images/about-image-12.jpg) ;
+}
+
+.about-image-17 {
+  background-image:url(../images/about-image-13.jpg) ;
+}
+
+.about-image-18 {
+  background-image:url(../images/about-image-14.jpg) ;
+}
+
+.about-image-19 {
+  background-image:url(../images/about-image-15.jpg) ;
+}
+
+.about-image-20 {
+  display:none;
+  background-image:url(../images/about-image-16.jpg) ;
+}
+
+.about-image-21 {
+  display:none;
+  background-image:url(../images/about-image-17.jpg) ;
+}
+
+.about-image-22 {
+  display:none;
+  background-image:url(../images/about-image-18.jpg) ;
+}
+
+.about-image-23 {
+  display:none;
+  background-image:url(../images/about-image-19.jpg) ;
+}
+
+.about-image-24 {
+  display:none;
+  background-image:url(../images/about-image-20.jpg) ;
+}
+
+.about-image-25 {
+  display:none;
+  background-image:url(../images/about-image-21.jpg) ;
+}
+
+.about-image-26 {
+  display:none;
+  background-image:url(../images/about-image-22.jpg) ;
+}
+
+.about-image-27 {
+  display:none;
+  background-image:url(../images/about-image-23.jpg) ;
+}
+
+.about-image-28 {
+  display:none;
+  background-image:url(../images/about-image-24.jpg) ;
+}
+
+.about-image-29 {
+  display:none;
+  background-image:url(../images/about-image-25.jpg) ;
+}
+
+.about-image-30 {
+  display:none;
+  background-image:url(../images/about-image-26.jpg) ;
+}
+
+.about-image-31 {
+  display:none;
+  background-image:url(../images/about-image-27.jpg) ;
+}
+
+.about-image-32 {
+  display:none;
+  background-image:url(../images/about-image-28.jpg) ;
+}
+
+.about-image-41 {
+  background-image:url(../images/about-image-29.jpg) ;
+}
+
+.about-image-42 {
+  background-image:url(../images/about-image-30.jpg) ;
+}
+
+.about-image-43 {
+  background-image:url(../images/about-image-31.jpg) ;
+}
+
+.about-image-44 {
+  background-image:url(../images/about-image-32.jpg) ;
+}
+
+.about-image-45 {
+  background-image:url(../images/about-image-33.jpg) ;
+}
+
+.about-image-46 {
+  display:none;
+  background-image:url(../images/about-image-34.jpg) ;
+}
+
+.about-image-47 {
+  display:none;
+  background-image:url(../images/about-image-35.jpg) ;
+}
+
+.about-image-48 {
+  display:none;
+  background-image:url(../images/about-image-36.jpg) ;
+}
+
+.about-image-49 {
+  display:none;
+  background-image:url(../images/about-image-37.jpg) ;
+}
+
+.about-image-50 {
+  display:none;
+  background-image:url(../images/about-image-38.jpg) ;
+}
+
+.about-image-57 {
+  background-image:url(../images/about-image-39.jpg) ;
+}
+
+.about-image-58 {
+  background-image:url(../images/about-image-40.jpg) ;
+}
+
+.about-image-59 {
+  background-image:url(../images/about-image-41.jpg) ;
+}
+
+.about-image-60 {
+  background-image:url(../images/about-image-42.jpg) ;
+}
+
+.about-image-61 {
+  background-image:url(../images/about-image-43.jpg) ;
+}
+
+.about-image-62 {
+  display:none;
+  background-image:url(../images/about-image-44.jpg) ;
+}
+
+.about-image-63 {
+  display:none;
+  background-image:url(../images/about-image-45.jpg) ;
+}
+
+.about-image-64 {
+  display:none;
+  background-image:url(../images/about-image-46.jpg) ;
+}
+
+.about-image-65 {
+  display:none;
+  background-image:url(../images/about-image-47.jpg) ;
+}
+
+.about-image-66 {
+  display:none;
+  background-image:url(../images/about-image-48.jpg) ;
+}
+
+.about-image-67 {
+  display:none;
+  background-image:url(../images/about-image-49.jpg) ;
+}
+
+.about-image-68 {
+  display:none;
+  background-image:url(../images/about-image-50.jpg) ;
+}
+
+.about-image-69 {
+  display:none;
+  background-image:url(../images/about-image-51.jpg) ;
+}
+
+.about-image-70 {
+  display:none;
+  background-image:url(../images/about-image-52.jpg) ;
+}
+
+.about-copy {
+  float       : left;
+  width       : 100%;
+  height      : 80px;
+  background  : #fff;
+  line-height : 1;
+  padding     : 0;
+  font-size   : 1.6em;
+  position    : relative;
+
+  div {
+    transform  : translateY(-50%);
+    position   : absolute;
+    top        : 50%;
+    text-align : center;
+    left       : 5%;
+    right      : 5%;
+  }
+
+  span {
+    text-transform:uppercase;
+  }
+
+}
+
+.about-copy-1 {
+
+  span {
+    color:$cpc;
+  }
+
+}
+
+.about-copy-2 {
+
+  div {
+
+  }
+
+  span {
+    color:$cpc-blue;
+  }
+
+}
+
+.about-copy-3 {
+
+  span {
+    color:$cpc-red;
+  }
+
+}
+
+@media ( min-width: $grid-small-breakpoint ) {
+
+  .about-copy {
+    height: 120px;
+    background: #fff;
+    line-height: 1;
+    padding: 0;
+    font-size: 1.6em;
+    position: relative;
+  }
+
+  .about-copy-1 {
+  
+    width : 40%;
+
+  }
+
+  .about-copy-2 {
+    
+    width : 80%;
+
+  }
+
+  .about-copy-3 {
+    
+    width : 60%;
+
+  }
+
+  .about-image {
+    width:10%;
+    height:120px;
+  }
+
+  .about-image-6,
+  .about-image-7,
+  .about-image-8,
+  .about-image-9,
+  .about-image-10,
+  .about-image-20,
+  .about-image-21,
+  .about-image-22,
+  .about-image-23,
+  .about-image-24,
+  .about-image-25,
+  .about-image-26,
+  .about-image-27,
+  .about-image-28,
+  .about-image-29,
+  .about-image-30,
+  .about-image-31,
+  .about-image-32,
+  .about-image-46,
+  .about-image-47,
+  .about-image-48,
+  .about-image-49,
+  .about-image-50,
+  .about-image-62,
+  .about-image-63,
+  .about-image-64,
+  .about-image-65,
+  .about-image-66,
+  .about-image-67,
+  .about-image-68,
+  .about-image-69,
+  .about-image-70 {
+    display:block;
+  }
+  
+}
+
+@media ( min-width: $grid-medium-breakpoint ) {
+
+  .about-copy {
+    height : 140px;
+  }
+
+  .about-image {
+    height : 140px;
+  }
+  
+}
+
+@media ( min-width: $grid-large-breakpoint ) {
+
+  .about-copy {
+    height : 160px;
+  }
+
+  .about-image {
+    height : 160px;
+  }
+  
+}

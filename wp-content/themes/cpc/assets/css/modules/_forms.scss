@@ -1,0 +1,231 @@
+input, select, textarea, label {
+	box-sizing:border-box;
+}
+
+.response-form {
+
+}
+
+form {
+
+	font-size:$base-font-size;
+
+	div {
+
+		clear:both;
+		background:$mercury;
+		width:100%;
+		position:relative;
+		margin:1em 0;
+		padding:0;
+
+	}
+
+}
+
+label {
+	// position    : absolute;
+	// top         : 0;
+	// left        : 0;
+	// right       : 0;
+	// bottom      : 0;
+	// line-height : 40px;
+	// color       : $shark;
+	// display     : block;
+	// 
+	// 
+	// font-style  : italic;
+	display   : block;
+	font-size : em(16px);
+	padding   : 0.5em 1em;
+}
+
+input[type="text"] {
+	color         : $shark;
+	line-height   : 40px;
+	padding       : 0.5em 1em;
+	background    : none;
+	font-size     : em(16px);
+	font-family   : $font-family;
+	border-width  : 1px;
+	border-style  : solid;
+	border-color  : $mercury;
+	border-radius : 0;
+	width         : 100%;
+	display       : block;
+	transition    : border-color 0.75s ease, margin-bottom 0.5s ease;
+	outline       : none;
+	margin-bottom : 0;
+
+	&.error {
+	
+		border-color: $flamingo;
+		margin-bottom: 2em;
+
+	}
+
+}
+
+input[type="submit"] {
+	border    : 0 solid transparent;
+	margin    : 0;
+	width     : 100%;
+	cursor    : pointer;
+	height    : 55px;
+	font-size : 1em;
+	outline   : none;
+
+	&:disabled {
+
+		background:$cloudy;
+		box-shadow:0 0 3px $cloudy;
+		cursor: default;
+
+	}
+
+}
+
+.select-group {
+
+	label {
+		top:-9999px;
+		z-index: -2;
+		left:-9999px;
+		padding:0;
+		height:0;
+		line-height: 0;
+	}
+
+}
+
+span.error-info {
+
+	display: none;
+	position: absolute;
+	bottom:-14px;
+	font-size:0.5em;
+	color:$piper;
+
+	input[type="text"].error + & {
+		display: block;
+	}
+
+}
+
+/************************************************************************/
+/* STYLIZED DROPDOWNS
+/************************************************************************/
+
+.select-group {
+
+	border-width : 1px;
+	border-style : solid;
+	border-color : $mercury;
+	box-sizing   : border-box;
+	transition   : border-color 0.75s ease, margin-bottom 0.5s ease;
+	height     : 58px;
+
+	&.error {
+	
+		border-color  : $flamingo;
+		margin-bottom : 2em;
+
+		span.error-info {
+			display : block;
+		}
+
+	}
+
+}
+
+.select-dropdown {
+	display    : inline-block;
+	position   : relative;
+	overflow   : hidden;
+	height     : 58px;
+	width      : 100%;
+	background : $shakespeare;
+	border     : 0px solid transparent;
+	margin     : 0;
+	padding    : 0;
+	box-shadow: 0 3px 0 $astral; 
+
+	&:after {
+		content          : '';
+		position         : absolute;
+		z-index          : 2;
+		top              : 19px;
+		right            : 1.5em;
+		width            : 0;
+		height           : 0;
+		border           : 8px dashed;
+		border-color     : #fff transparent;
+		pointer-events   : none;
+		margin-top       : 7px;
+		border-top-style : solid;
+		border-bottom    : none;
+	}
+
+	select {
+		position           : relative;
+		width              : 130%;
+		margin             : 0;
+		height             : 58px;
+		color              : $white;
+		line-height        : 42px;
+		padding            : 0.5em 1em;
+		outline            : none;
+		font-size          : em(20px);
+		font-weight:400;
+		font-family        : $font-family;
+		/* Fallback for IE 8 */
+		background         : $mercury;
+		/* "transparent" doesn't work with Opera */
+		background         : rgba(0, 0, 0, 0) !important;
+		border             : 0;
+		border-radius      : 0;
+		-webkit-appearance : none;
+		letter-spacing:1px;
+		option {
+			font-style : italic;
+			outline            : none;
+		}
+
+		&:focus {
+			z-index        : 3;
+			width          : 100%;
+			color          : $white;
+			outline        : none;
+			outline-offset : -2px;
+		}
+		
+		> option {
+			margin        : 3px;
+			padding       : 6px 8px;
+			text-shadow   : none;
+			background    : $smoke;
+			border-radius : 3px;
+			cursor        : pointer;
+		}
+
+	}
+
+}
+
+/* Fix for IE 8 putting the arrows behind the select element. */
+.lt-ie9 .select-dropdown {
+  z-index: 1;
+}
+.lt-ie9 select {
+  z-index: -1;
+}
+.lt-ie9 select:focus {
+  z-index: 3;
+}
+
+/* Dirty fix for Firefox adding padding where it shouldn't. */
+@-moz-document url-prefix() {
+  select {
+    padding-left: 6px;
+  }
+}
